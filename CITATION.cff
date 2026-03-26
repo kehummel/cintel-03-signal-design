@@ -19,9 +19,12 @@ authors:
     given-names: Denise M.
     orcid: "https://orcid.org/0000-0001-6165-7389"
     affiliation: "Northwest Missouri State University, USA"
+  - family-names: Hummel
+    given-names: Kimberly E
+    affiliation: "Northwest Missouri State University, USA"
 
-repository-code: "https://github.com/denisecase/cintel-03-signal-design"
-url: "https://github.com/denisecase/cintel-03-signal-design"
+repository-code: "https://github.com/kehummel/cintel-03-signal-design"
+url: "https://github.com/kehummel/cintel-03-signal-design"
 license: MIT
 
 abstract: |
