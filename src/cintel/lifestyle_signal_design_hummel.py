@@ -1,18 +1,8 @@
 """
-signal_design_hummel.py - Project script - copy and modification of example.
+lifestyle_signal_design_hummel.py - Project script - copy and modification of example.
 
 Author: Denise Case, Kim Hummel
 Date: 2026-03
-
-System Metrics Data
-
-- Data is taken from a system that records operational metrics.
-- The data is structured and static for this example.
-- Each row represents one observation of system behavior.
-- The CSV file includes these columns:
-  - requests: number of requests handled
-  - errors: number of failed requests
-  - total_latency_ms: total response time in milliseconds
 
 Purpose
 
@@ -29,17 +19,13 @@ Questions to Consider
 
 Paths (relative to repo root)
 
-    INPUT FILE: data/system_metrics_case.csv
-    OUTPUT FILE: artifacts/signals_case.csv
+    INPUT FILE: data/lifestyle_metrics_hummel.csv
+    OUTPUT FILE: artifacts/lifestyle_artifact_signals_hummel.csv
 
 Terminal command to run this file from the root project folder
 
-    uv run python -m cintel.signal_design_case
+    uv run python -m cintel.lifestyle_signal_design_hummel
 
-OBS:
-  Don't edit this file - it should remain a working example.
-  Use as much of this code as you can when creating your own pipeline script,
-  and change the logic to create signals that make sense for your project.
 """
 
 # === DECLARE IMPORTS (packages we will use in this project) ===
@@ -64,8 +50,8 @@ ARTIFACTS_DIR: Final[Path] = ROOT_DIR / "artifacts"
 
 # === DECLARE GLOBAL CONSTANTS FOR FILE PATHS ===
 
-DATA_FILE: Final[Path] = DATA_DIR / "system_metrics_case.csv"
-OUTPUT_FILE: Final[Path] = ARTIFACTS_DIR / "signals_hummel.csv"
+DATA_FILE: Final[Path] = DATA_DIR / "lifestyle_metrics_hummel.csv"
+OUTPUT_FILE: Final[Path] = ARTIFACTS_DIR / "lifestyle_signals_hummel.csv"
 
 
 # === DEFINE THE MAIN FUNCTION ===
@@ -122,88 +108,92 @@ def main() -> None:
     # ----------------------------------------------------
     # STEP 2.1: DEFINE A CONDITION WE CAN REUSE
     # ----------------------------------------------------
-    # Only calculate per-request signals when requests > 0.
+    # Only calculate per-request signals when Age > 0.
     # Use the Polars col() function to refer to a column by name.
     # This creates a boolean expression:
-    # True when requests > 0, False otherwise.
-    is_requests_positive: pl.Expr = pl.col("requests") > 0
+    # True when Age > 0, False otherwise.
+    is_age_positive: pl.Expr = pl.col("Age") > 0
 
     # ----------------------------------------------------
-    # STEP 2.2: DEFINE THE ERROR RATE CALCULATION
+    # STEP 2.2: DEFINE THE HEIGHT/WEIGHT RATIO
     # ----------------------------------------------------
     # This creates an expression for:
-    #     errors / requests
+    #     height / weight
     # It is only a calculation recipe at this point.
-    calculated_error_rate: pl.Expr = pl.col("errors") / pl.col("requests")
+    calculate_height_weight_ratio: pl.Expr = pl.col("Height_cm") / pl.col(
+        "Initial_Weight_kg"
+    )
 
     # ----------------------------------------------------
-    # STEP 2.3: DEFINE THE ERROR RATE SIGNAL RECIPE
+    # STEP 2.3: DEFINE HEIGHT/WEIGHT RATIO SIGNAL RECIPE
     # ----------------------------------------------------
     # A signal recipe tells Polars how to build a new column.
-    # If requests > 0, use errors / requests.
+    # If age > 0, use height / weight.
     # Otherwise, use 0.0.
-    # Name the new column "error_rate".
-    error_rate_signal_recipe: pl.Expr = (
-        pl.when(is_requests_positive)
-        .then(calculated_error_rate)
+    # Name the new column "height_weight_ratio".
+    height_weight_ratio_recipe: pl.Expr = (
+        pl.when(is_age_positive)
+        .then(calculate_height_weight_ratio)
         .otherwise(0.0)
-        .alias("error_rate")
+        .alias("height_weight_ratio")
     )
 
     # ----------------------------------------------------
-    # STEP 2.4: DEFINE THE AVERAGE LATENCY CALCULATION
+    # STEP 2.4: DEFINE THE CHANGE IN WEIGHT CALCULATION
     # ----------------------------------------------------
     # This creates an expression for:
-    #     total_latency_ms / requests
+    #     Initial Weight - Current Weight
     # Again, this is only a calculation recipe so far.
-    calculated_avg_latency: pl.Expr = pl.col("total_latency_ms") / pl.col("requests")
+    calculated_weight_change: pl.Expr = pl.col("Initial_Weight_kg") - pl.col(
+        "Current_Weight_kg"
+    )
 
     # ----------------------------------------------------
-    # STEP 2.5: DEFINE THE AVERAGE LATENCY SIGNAL RECIPE
+    # STEP 2.5: DEFINE THE CHANGE IN WEIGHT SIGNAL RECIPE
     # ----------------------------------------------------
-    # If is_requests_positive is true,
-    # then: set to calculated_avg_latency
+    # If is_age_positive is true,
+    # then: set to calculated_weight_change
     # else: set to 0.0.
-    # Name the new column "avg_latency_ms".
-    avg_latency_signal_recipe: pl.Expr = (
-        pl.when(is_requests_positive)
-        .then(calculated_avg_latency)
+    # Name the new column "change_in_weight".
+    weight_change_signal_recipe: pl.Expr = (
+        pl.when(is_age_positive)
+        .then(calculated_weight_change)
         .otherwise(0.0)
-        .alias("avg_latency_ms")
+        .alias("change_in_weight")
     )
 
     # ----------------------------------------------------
-    # STEP 2.6: DEFINE THE AVERAGE LATENCY PER ERROR CALCULATION
+    # STEP 2.6: DEFINE THE AVERAGE STEPS PER CALORIE CALCULATION
     # ----------------------------------------------------
     # This creates an expression for:
-    #     total_latency_ms / error
+    #     Steps / Calories consumed
     # Again, this is only a calculation recipe so far.
-    calculated_latency_per_error: pl.Expr = pl.col("total_latency_ms") / pl.col(
-        "errors"
+    calculated_steps_per_calorie: pl.Expr = pl.col("Steps") / pl.col(
+        "Calories_Consumed"
     )
 
     # STEP 2.7: DEFINE THE AVERAGE LATENCY SIGNAL RECIPE
     # ----------------------------------------------------
-    # If is_requests_positive is true,
+    # If is_age_positive is true,
     # then: set to calculated_latency_per_error
     # else: set to 0.0.
     # Name the new column "avg_latency_per_error".
-    avg_latency_per_error_recipe: pl.Expr = (
-        pl.when(is_requests_positive)
-        .then(calculated_latency_per_error)
+    avg_steps_per_calorie_recipe: pl.Expr = (
+        pl.when(is_age_positive)
+        .then(calculated_steps_per_calorie)
         .otherwise(0.0)
-        .alias("avg_latency_per_error")
+        .alias("steps_per_calorie")
     )
 
     # ----------------------------------------------------
     # STEP 2.8: DEFINE THE THROUGHPUT SIGNAL RECIPE
     # ----------------------------------------------------
-    # In this example, throughput is just the requests column,
-    # which contains the number of requests handled in each observation.
+    # In this example, throughput is just the Stress Level column,
+    # which contains the number of Stress Level handled in each observation.
     # This shows that a signal can be:
     # - a new calculation, or
     # - a renamed version of an existing column.
-    throughput_signal_recipe: pl.Expr = pl.col("requests").alias("throughput")
+    throughput_signal_recipe: pl.Expr = pl.col("Stress_Level").alias("throughput")
 
     # ----------------------------------------------------
     # STEP 2.9: APPLY THE SIGNAL RECIPES TO THE DATAFRAME
@@ -212,14 +202,16 @@ def main() -> None:
     # and create a new DataFrame with the added signal columns.
     df_with_signals: pl.DataFrame = df.with_columns(
         [
-            error_rate_signal_recipe,
-            avg_latency_signal_recipe,
+            height_weight_ratio_recipe,
+            weight_change_signal_recipe,
+            avg_steps_per_calorie_recipe,
             throughput_signal_recipe,
-            avg_latency_per_error_recipe,
         ]
     )
 
-    LOG.info("Created signal columns: error_rate, avg_latency_ms, throughput")
+    LOG.info(
+        "Created signal columns: height_weight_ration, weight_change, steps_per_calorie, throughput"
+    )
 
     # ----------------------------------------------------
     # STEP 3: SELECT THE COLUMNS WE WANT TO SAVE
@@ -229,13 +221,17 @@ def main() -> None:
     # to include in the final output.
     signals_df = df_with_signals.select(
         [
-            "requests",
-            "errors",
-            "total_latency_ms",
-            "error_rate",
-            "avg_latency_ms",
-            "throughput",
-            "avg_latency_per_error",
+            "Age",
+            "Height_cm",
+            "Initial_Weight_kg",
+            "Stress_Level",
+            "Sleep_Hours",
+            "Calories_Consumed",
+            "Steps",
+            "Current_Weight_kg",
+            "height_weight_ratio",
+            "change_in_weight",
+            "steps_per_calorie",
         ]
     )
 

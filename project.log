@@ -94,3 +94,152 @@
 2026-03-29 17:59:15 | INFO | P3 | Pipeline executed successfully!
 2026-03-29 17:59:15 | INFO | P3 | ========================
 2026-03-29 17:59:15 | INFO | P3 | END main()
+2026-03-29 18:54:40 | INFO | P3 | === RUN START ===
+2026-03-29 18:54:40 | INFO | P3 | project=CINTEL
+2026-03-29 18:54:40 | INFO | P3 | repo_dir=cintel-03-signal-design
+2026-03-29 18:54:40 | INFO | P3 | python=3.14.3
+2026-03-29 18:54:40 | INFO | P3 | os=Windows 11
+2026-03-29 18:54:40 | INFO | P3 | shell=powershell
+2026-03-29 18:54:40 | INFO | P3 | cwd=.
+2026-03-29 18:54:40 | INFO | P3 | github_actions=False
+2026-03-29 18:54:40 | INFO | P3 | ========================
+2026-03-29 18:54:40 | INFO | P3 | START main()
+2026-03-29 18:54:40 | INFO | P3 | ========================
+2026-03-29 18:54:40 | INFO | P3 | ROOT_DIR = .
+2026-03-29 18:54:40 | INFO | P3 | DATA_FILE = data\lifestyle_signal_hummel.csv
+2026-03-29 18:54:40 | INFO | P3 | OUTPUT_FILE = artifacts\lifestyle_artifact_signals_hummel.csv
+2026-03-29 18:54:40 | INFO | P3 | ARTIFACTS_DIR = artifacts
+2026-03-29 18:54:40 | INFO | P3 | Loaded 55000 system metric records
+2026-03-29 18:54:40 | INFO | P3 | Designing signals from the raw metrics...
+2026-03-29 18:57:42 | INFO | P3 | === RUN START ===
+2026-03-29 18:57:42 | INFO | P3 | project=CINTEL
+2026-03-29 18:57:42 | INFO | P3 | repo_dir=cintel-03-signal-design
+2026-03-29 18:57:42 | INFO | P3 | python=3.14.3
+2026-03-29 18:57:42 | INFO | P3 | os=Windows 11
+2026-03-29 18:57:42 | INFO | P3 | shell=powershell
+2026-03-29 18:57:42 | INFO | P3 | cwd=.
+2026-03-29 18:57:42 | INFO | P3 | github_actions=False
+2026-03-29 18:57:42 | INFO | P3 | ========================
+2026-03-29 18:57:42 | INFO | P3 | START main()
+2026-03-29 18:57:42 | INFO | P3 | ========================
+2026-03-29 18:57:42 | INFO | P3 | ROOT_DIR = .
+2026-03-29 18:57:42 | INFO | P3 | DATA_FILE = data\lifestyle_signal_hummel.csv
+2026-03-29 18:57:42 | INFO | P3 | OUTPUT_FILE = artifacts\lifestyle_artifact_signals_hummel.csv
+2026-03-29 18:57:42 | INFO | P3 | ARTIFACTS_DIR = artifacts
+2026-03-29 18:57:42 | INFO | P3 | Loaded 55000 system metric records
+2026-03-29 18:57:42 | INFO | P3 | Designing signals from the raw metrics...
+2026-03-29 18:57:42 | INFO | P3 | Created signal columns: height_weight_ration, weight_change, steps_per_calorie, throughput
+2026-03-29 19:00:36 | INFO | P3 | === RUN START ===
+2026-03-29 19:00:36 | INFO | P3 | project=CINTEL
+2026-03-29 19:00:36 | INFO | P3 | repo_dir=cintel-03-signal-design
+2026-03-29 19:00:36 | INFO | P3 | python=3.14.3
+2026-03-29 19:00:36 | INFO | P3 | os=Windows 11
+2026-03-29 19:00:36 | INFO | P3 | shell=powershell
+2026-03-29 19:00:36 | INFO | P3 | cwd=.
+2026-03-29 19:00:36 | INFO | P3 | github_actions=False
+2026-03-29 19:00:36 | INFO | P3 | ========================
+2026-03-29 19:00:36 | INFO | P3 | START main()
+2026-03-29 19:00:36 | INFO | P3 | ========================
+2026-03-29 19:00:36 | INFO | P3 | ROOT_DIR = .
+2026-03-29 19:00:36 | INFO | P3 | DATA_FILE = data\lifestyle_signal_hummel.csv
+2026-03-29 19:00:36 | INFO | P3 | OUTPUT_FILE = artifacts\lifestyle_signals_hummel.csv
+2026-03-29 19:00:36 | INFO | P3 | ARTIFACTS_DIR = artifacts
+2026-03-29 19:00:36 | INFO | P3 | Loaded 55000 system metric records
+2026-03-29 19:00:36 | INFO | P3 | Designing signals from the raw metrics...
+2026-03-29 19:00:36 | INFO | P3 | Created signal columns: height_weight_ration, weight_change, steps_per_calorie, throughput
+2026-03-29 19:01:47 | INFO | P3 | === RUN START ===
+2026-03-29 19:01:47 | INFO | P3 | project=CINTEL
+2026-03-29 19:01:47 | INFO | P3 | repo_dir=cintel-03-signal-design
+2026-03-29 19:01:47 | INFO | P3 | python=3.14.3
+2026-03-29 19:01:47 | INFO | P3 | os=Windows 11
+2026-03-29 19:01:47 | INFO | P3 | shell=powershell
+2026-03-29 19:01:47 | INFO | P3 | cwd=.
+2026-03-29 19:01:47 | INFO | P3 | github_actions=False
+2026-03-29 19:01:47 | INFO | P3 | ========================
+2026-03-29 19:01:47 | INFO | P3 | START main()
+2026-03-29 19:01:47 | INFO | P3 | ========================
+2026-03-29 19:01:47 | INFO | P3 | ROOT_DIR = .
+2026-03-29 19:01:47 | INFO | P3 | DATA_FILE = data\lifestyle_signal_hummel.csv
+2026-03-29 19:01:47 | INFO | P3 | OUTPUT_FILE = artifacts\lifestyle_signals_hummel.csv
+2026-03-29 19:01:47 | INFO | P3 | ARTIFACTS_DIR = artifacts
+2026-03-29 19:01:47 | INFO | P3 | Loaded 55000 system metric records
+2026-03-29 19:01:47 | INFO | P3 | Designing signals from the raw metrics...
+2026-03-29 19:01:47 | INFO | P3 | Created signal columns: height_weight_ration, weight_change, steps_per_calorie, throughput
+2026-03-29 19:01:47 | INFO | P3 | Enhanced signals table has 55000 rows
+2026-03-29 19:01:47 | INFO | P3 | Wrote signals file: C:\Repos\Continuouse_Intelligence\cintel-03-signal-design\artifacts\lifestyle_signals_hummel.csv
+2026-03-29 19:01:47 | INFO | P3 | ========================
+2026-03-29 19:01:47 | INFO | P3 | Pipeline executed successfully!
+2026-03-29 19:01:47 | INFO | P3 | ========================
+2026-03-29 19:01:47 | INFO | P3 | END main()
+2026-03-29 19:10:53 | INFO | P3 | === RUN START ===
+2026-03-29 19:10:53 | INFO | P3 | project=CINTEL
+2026-03-29 19:10:53 | INFO | P3 | repo_dir=cintel-03-signal-design
+2026-03-29 19:10:53 | INFO | P3 | python=3.14.3
+2026-03-29 19:10:53 | INFO | P3 | os=Windows 11
+2026-03-29 19:10:53 | INFO | P3 | shell=powershell
+2026-03-29 19:10:53 | INFO | P3 | cwd=.
+2026-03-29 19:10:53 | INFO | P3 | github_actions=False
+2026-03-29 19:10:53 | INFO | P3 | ========================
+2026-03-29 19:10:53 | INFO | P3 | START main()
+2026-03-29 19:10:53 | INFO | P3 | ========================
+2026-03-29 19:10:53 | INFO | P3 | ROOT_DIR = .
+2026-03-29 19:10:53 | INFO | P3 | DATA_FILE = data\lifestyle_signal_hummel.csv
+2026-03-29 19:10:53 | INFO | P3 | OUTPUT_FILE = artifacts\lifestyle_signals_hummel.csv
+2026-03-29 19:10:53 | INFO | P3 | ARTIFACTS_DIR = artifacts
+2026-03-29 19:10:53 | INFO | P3 | Loaded 18422 system metric records
+2026-03-29 19:10:53 | INFO | P3 | Designing signals from the raw metrics...
+2026-03-29 19:10:53 | INFO | P3 | Created signal columns: height_weight_ration, weight_change, steps_per_calorie, throughput
+2026-03-29 19:10:53 | INFO | P3 | Enhanced signals table has 18422 rows
+2026-03-29 19:10:53 | INFO | P3 | Wrote signals file: C:\Repos\Continuouse_Intelligence\cintel-03-signal-design\artifacts\lifestyle_signals_hummel.csv
+2026-03-29 19:10:53 | INFO | P3 | ========================
+2026-03-29 19:10:53 | INFO | P3 | Pipeline executed successfully!
+2026-03-29 19:10:53 | INFO | P3 | ========================
+2026-03-29 19:10:53 | INFO | P3 | END main()
+2026-03-29 19:14:19 | INFO | P3 | === RUN START ===
+2026-03-29 19:14:19 | INFO | P3 | project=CINTEL
+2026-03-29 19:14:19 | INFO | P3 | repo_dir=cintel-03-signal-design
+2026-03-29 19:14:19 | INFO | P3 | python=3.14.3
+2026-03-29 19:14:19 | INFO | P3 | os=Windows 11
+2026-03-29 19:14:19 | INFO | P3 | shell=powershell
+2026-03-29 19:14:19 | INFO | P3 | cwd=.
+2026-03-29 19:14:19 | INFO | P3 | github_actions=False
+2026-03-29 19:14:19 | INFO | P3 | ========================
+2026-03-29 19:14:19 | INFO | P3 | START main()
+2026-03-29 19:14:19 | INFO | P3 | ========================
+2026-03-29 19:14:19 | INFO | P3 | ROOT_DIR = .
+2026-03-29 19:14:19 | INFO | P3 | DATA_FILE = data\lifestyle_signal_hummel.csv
+2026-03-29 19:14:19 | INFO | P3 | OUTPUT_FILE = artifacts\lifestyle_signals_hummel.csv
+2026-03-29 19:14:19 | INFO | P3 | ARTIFACTS_DIR = artifacts
+2026-03-29 19:14:19 | INFO | P3 | Loaded 148 system metric records
+2026-03-29 19:14:19 | INFO | P3 | Designing signals from the raw metrics...
+2026-03-29 19:14:19 | INFO | P3 | Created signal columns: height_weight_ration, weight_change, steps_per_calorie, throughput
+2026-03-29 19:14:19 | INFO | P3 | Enhanced signals table has 148 rows
+2026-03-29 19:14:19 | INFO | P3 | Wrote signals file: C:\Repos\Continuouse_Intelligence\cintel-03-signal-design\artifacts\lifestyle_signals_hummel.csv
+2026-03-29 19:14:19 | INFO | P3 | ========================
+2026-03-29 19:14:19 | INFO | P3 | Pipeline executed successfully!
+2026-03-29 19:14:19 | INFO | P3 | ========================
+2026-03-29 19:14:19 | INFO | P3 | END main()
+2026-03-29 19:17:17 | INFO | P3 | === RUN START ===
+2026-03-29 19:17:17 | INFO | P3 | project=CINTEL
+2026-03-29 19:17:17 | INFO | P3 | repo_dir=cintel-03-signal-design
+2026-03-29 19:17:17 | INFO | P3 | python=3.14.3
+2026-03-29 19:17:17 | INFO | P3 | os=Windows 11
+2026-03-29 19:17:17 | INFO | P3 | shell=powershell
+2026-03-29 19:17:17 | INFO | P3 | cwd=.
+2026-03-29 19:17:17 | INFO | P3 | github_actions=False
+2026-03-29 19:17:17 | INFO | P3 | ========================
+2026-03-29 19:17:17 | INFO | P3 | START main()
+2026-03-29 19:17:17 | INFO | P3 | ========================
+2026-03-29 19:17:17 | INFO | P3 | ROOT_DIR = .
+2026-03-29 19:17:17 | INFO | P3 | DATA_FILE = data\lifestyle_metrics_hummel.csv
+2026-03-29 19:17:17 | INFO | P3 | OUTPUT_FILE = artifacts\lifestyle_signals_hummel.csv
+2026-03-29 19:17:17 | INFO | P3 | ARTIFACTS_DIR = artifacts
+2026-03-29 19:17:17 | INFO | P3 | Loaded 100 system metric records
+2026-03-29 19:17:17 | INFO | P3 | Designing signals from the raw metrics...
+2026-03-29 19:17:17 | INFO | P3 | Created signal columns: height_weight_ration, weight_change, steps_per_calorie, throughput
+2026-03-29 19:17:17 | INFO | P3 | Enhanced signals table has 100 rows
+2026-03-29 19:17:17 | INFO | P3 | Wrote signals file: C:\Repos\Continuouse_Intelligence\cintel-03-signal-design\artifacts\lifestyle_signals_hummel.csv
+2026-03-29 19:17:17 | INFO | P3 | ========================
+2026-03-29 19:17:17 | INFO | P3 | Pipeline executed successfully!
+2026-03-29 19:17:17 | INFO | P3 | ========================
+2026-03-29 19:17:17 | INFO | P3 | END main()
