@@ -128,3 +128,7 @@ git push -u origin main
 
 - Use the **UP ARROW** and **DOWN ARROW** in the terminal to scroll through past commands.
 - Use `CTRL+f` to find (and replace) text within a file.
+
+## Phase 4
+
+I added a signal to calculate the average amount of time between errors. The name of the file and artifact were also changed to include my last name instead of Case's.
